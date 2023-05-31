@@ -31,6 +31,10 @@ function App() {
         localStorage.removeItem('counterValue + 1')
     }
 
+    const setSessionStorage = () => {
+        sessionStorage.setItem('counterValue', JSON.stringify(value))
+    }
+
     return (
         <div className="App">
             <h1>LocalStorage</h1>
@@ -40,6 +44,9 @@ function App() {
             <button onClick={getToLocalStorage}>getToLocalStorage</button>
             <button onClick={clearLocalStorage}>clearLocalStorage</button>
             <button onClick={removeLocalStorage}>clearLocalStorage</button>
+            <br/>
+
+            <button onClick={setSessionStorage}>sessionStorage</button>
         </div>
     );
 }
